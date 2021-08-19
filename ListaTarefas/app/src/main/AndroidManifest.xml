@@ -11,9 +11,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <activity
-            android:name=".CadastroActivity"
-            android:exported="true" />
 
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
