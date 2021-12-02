@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CadastroFragment">
+
+    <ImageView
+        android:id="@+id/ivTarefa"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvNomeTarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Nome da Tarefa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivTarefa" />
+
+    <TextView
+        android:id="@+id/tvOQue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="O que deve ser feito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNomeTarefa" />
+
+    <TextView
+        android:id="@+id/tvAteQuando"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Até quando deve ser feito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOQue" />
+
+    <Button
+        android:id="@+id/btConcluir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar Tarefa"
+        android:background="#00dc00"
+        android:layout_margin="15dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAteQuando" />
+
+    <Button
+        android:id="@+id/btDeletar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Deletar Tarefa"
+        android:background="#dc0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btConcluir" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

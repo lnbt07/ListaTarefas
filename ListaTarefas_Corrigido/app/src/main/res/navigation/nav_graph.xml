@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listaFragment">
+
+    <fragment
+        android:id="@+id/listaFragment"
+        android:name="br.com.carolinabartoli.listatarefas_corrigido.ListaFragment"
+        android:label="fragment_lista"
+        tools:layout="@layout/fragment_lista" >
+        <action
+            android:id="@+id/action_listaFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+        <action
+            android:id="@+id/action_listaFragment_to_visualizarFragment"
+            app:destination="@id/visualizarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="br.com.carolinabartoli.listatarefas_corrigido.CadastroFragment"
+        android:label="CadastroFragment">
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/visualizarFragment"
+        android:name="br.com.carolinabartoli.listatarefas_corrigido.VisualizarFragment"
+        android:label="VisualizarFragment" >
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true"
+            />
+        <action
+            android:id="@+id/action_visualizarFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+    </fragment>
+</navigation>
